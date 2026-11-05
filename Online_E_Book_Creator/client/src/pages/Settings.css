@@ -1,0 +1,524 @@
+
+/* =====================================
+   BOOKCRAFT SETTINGS PAGE
+===================================== */
+
+.settings-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f7fc;
+  color: #29213f;
+  font-family: inherit;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.settings-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid #eeeaf7;
+  padding: 27px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 10px;
+  margin-bottom: 48px;
+  color: #7046d8;
+}
+
+.settings-logo h2 {
+  font-size: 23px;
+  margin: 0;
+  color: #30205f;
+}
+
+.settings-navigation {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-nav-item {
+  border: none;
+  background: transparent;
+  color: #777187;
+  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.settings-nav-item:hover,
+.settings-nav-item.active {
+  background: #f0eaff;
+  color: #7046d8;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.settings-main {
+  flex: 1;
+  min-width: 0;
+  padding: 38px 42px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  margin-bottom: 28px;
+}
+
+.settings-header h1 {
+  font-size: 32px;
+  margin: 9px 0;
+  color: #29213f;
+}
+
+.settings-header p {
+  color: #8b8599;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* =====================================
+   SETTINGS CARDS
+===================================== */
+
+.settings-card {
+  background: white;
+  padding: 27px;
+  border: 1px solid #eeeaf5;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 18px rgba(40, 25, 80, 0.025);
+}
+
+.settings-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+  color: #7046d8;
+}
+
+.settings-section-heading > div {
+  color: #29213f;
+}
+
+.settings-section-heading h2 {
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.settings-section-heading p {
+  color: #9790a4;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* =====================================
+   SETTINGS OPTIONS
+===================================== */
+
+.settings-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0edf5;
+}
+
+.settings-option:last-child {
+  border-bottom: none;
+}
+
+.settings-option > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settings-option h3 {
+  font-size: 14px;
+  margin: 0;
+  color: #29213f;
+}
+
+.settings-option p {
+  color: #9992a5;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* =====================================
+   SELECT CONTROLS
+===================================== */
+
+.settings-option select {
+  width: 220px;
+  max-width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #e5dfef;
+  border-radius: 9px;
+  background: white;
+  color: #39314c;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.settings-option select:focus {
+  border-color: #7046d8;
+  box-shadow: 0 0 0 3px rgba(112, 70, 216, 0.12);
+}
+
+/* =====================================
+   FONT SIZE SLIDER
+===================================== */
+
+.settings-control {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 220px;
+}
+
+.settings-control input[type="range"] {
+  width: 180px;
+  accent-color: #7046d8;
+  cursor: pointer;
+}
+
+.settings-control span {
+  color: #7046d8;
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* =====================================
+   TOGGLE SWITCHES
+===================================== */
+
+.settings-switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.settings-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings-slider {
+  position: absolute;
+  inset: 0;
+  background: #d8d3e1;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.settings-slider::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.settings-switch input:checked + .settings-slider {
+  background: #7046d8;
+}
+
+.settings-switch input:checked + .settings-slider::before {
+  transform: translateX(21px);
+}
+
+.settings-switch input:focus-visible + .settings-slider {
+  outline: 2px solid #8058df;
+  outline-offset: 3px;
+}
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.settings-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 9px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.settings-reset-btn {
+  background: white;
+  color: #6f687e;
+  border: 1px solid #e5dfef;
+}
+
+.settings-save-btn {
+  background: #7046d8;
+  color: white;
+  border: 1px solid #7046d8;
+}
+
+.settings-reset-btn:hover {
+  background: #f4f0ff;
+  transform: translateY(-1px);
+}
+
+.settings-save-btn:hover {
+  background: #5932bd;
+  transform: translateY(-1px);
+}
+
+/* =====================================
+   SUCCESS / ERROR MESSAGE
+===================================== */
+
+.settings-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 16px;
+  margin-top: 18px;
+  border-radius: 10px;
+  background: #eaf8f0;
+  color: #18844d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =====================================
+   FOCUS
+===================================== */
+
+.settings-page button:focus-visible {
+  outline: 2px solid #8058df;
+  outline-offset: 3px;
+}
+
+/* =====================================
+   DARK THEME
+===================================== */
+
+html[data-theme="dark"] .settings-page {
+  background: #151321;
+  color: #f1edf9;
+}
+
+html[data-theme="dark"] .settings-sidebar,
+html[data-theme="dark"] .settings-card {
+  background: #211d30;
+  border-color: #373047;
+  color: #f1edf9;
+}
+
+html[data-theme="dark"] .settings-logo h2,
+html[data-theme="dark"] .settings-header h1,
+html[data-theme="dark"] .settings-section-heading > div,
+html[data-theme="dark"] .settings-option h3 {
+  color: #f1edf9;
+}
+
+html[data-theme="dark"] .settings-header p,
+html[data-theme="dark"] .settings-section-heading p,
+html[data-theme="dark"] .settings-option p {
+  color: #aaa2bd;
+}
+
+html[data-theme="dark"] .settings-nav-item {
+  color: #c2bad3;
+}
+
+html[data-theme="dark"] .settings-nav-item:hover,
+html[data-theme="dark"] .settings-nav-item.active {
+  background: #35294f;
+  color: #b99aff;
+}
+
+html[data-theme="dark"] .settings-option {
+  border-color: #373047;
+}
+
+html[data-theme="dark"] .settings-option select {
+  background: #292438;
+  color: #eee8fa;
+  border-color: #484057;
+}
+
+html[data-theme="dark"] .settings-reset-btn {
+  background: #292438;
+  color: #eee8fa;
+  border-color: #484057;
+}
+
+html[data-theme="dark"] .settings-reset-btn:hover {
+  background: #392b58;
+}
+
+html[data-theme="dark"] .settings-message {
+  background: #173b2b;
+  color: #8ce0ae;
+}
+
+/* =====================================
+   SYSTEM THEME
+===================================== */
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme="system"] .settings-page {
+    background: #151321;
+    color: #f1edf9;
+  }
+
+  html[data-theme="system"] .settings-sidebar,
+  html[data-theme="system"] .settings-card {
+    background: #211d30;
+    border-color: #373047;
+    color: #f1edf9;
+  }
+
+  html[data-theme="system"] .settings-logo h2,
+  html[data-theme="system"] .settings-header h1,
+  html[data-theme="system"] .settings-section-heading > div,
+  html[data-theme="system"] .settings-option h3 {
+    color: #f1edf9;
+  }
+
+  html[data-theme="system"] .settings-header p,
+  html[data-theme="system"] .settings-section-heading p,
+  html[data-theme="system"] .settings-option p {
+    color: #aaa2bd;
+  }
+
+  html[data-theme="system"] .settings-option {
+    border-color: #373047;
+  }
+
+  html[data-theme="system"] .settings-option select,
+  html[data-theme="system"] .settings-reset-btn {
+    background: #292438;
+    color: #eee8fa;
+    border-color: #484057;
+  }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+  .settings-sidebar {
+    width: 220px;
+  }
+
+  .settings-main {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 650px) {
+  .settings-page {
+    display: block;
+  }
+
+  .settings-sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 17px;
+  }
+
+  .settings-logo {
+    margin-bottom: 15px;
+  }
+
+  .settings-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .settings-nav-item {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .settings-main {
+    padding: 25px 16px;
+  }
+
+  .settings-header h1 {
+    font-size: 27px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .settings-option {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-option select {
+    width: 100%;
+  }
+
+  .settings-control {
+    width: 100%;
+  }
+
+  .settings-control input[type="range"] {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .settings-actions {
+    flex-direction: column-reverse;
+  }
+
+  .settings-actions button {
+    width: 100%;
+  }
+}
+
+

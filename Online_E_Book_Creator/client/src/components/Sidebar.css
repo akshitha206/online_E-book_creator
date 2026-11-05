@@ -1,0 +1,186 @@
+.bc-sidebar {
+  width: 306px;
+  min-width: 306px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background: #192957;
+  color: #fff;
+  padding: 30px 23px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.bc-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 53px;
+}
+
+.bc-brand h2 {
+  font-size: 29px;
+  margin: 0;
+  color: #fff;
+}
+
+.bc-sidebar-heading {
+  font-size: 15px;
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.bc-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bc-nav-item {
+  width: 100%;
+  min-height: 59px;
+  border: none;
+  border-radius: 15px;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 0 19px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.bc-nav-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.bc-nav-item.active {
+  background: #fff;
+  color: #7046d8;
+  font-weight: 700;
+}
+
+.bc-sidebar-bottom {
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.bc-promo {
+  padding: 19px;
+  border-radius: 17px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.13);
+}
+
+.bc-promo h3 {
+  font-size: 17px;
+  margin: 12px 0 7px;
+  color: #fff;
+}
+
+.bc-promo p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #d5def5;
+  margin: 0 0 14px;
+}
+
+.bc-promo button {
+  width: 100%;
+  border: none;
+  border-radius: 9px;
+  padding: 11px;
+  background: #fff;
+  color: #192957;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.bc-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 2px 0;
+  margin-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.bc-avatar {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #192957;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.bc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bc-profile-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bc-profile-info strong,
+.bc-profile-info span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bc-profile-info strong {
+  font-size: 13px;
+  color: #fff;
+}
+
+.bc-profile-info span {
+  font-size: 11px;
+  color: #d5def5;
+}
+
+.bc-logout {
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 7px;
+}
+
+@media (max-width: 850px) {
+  .bc-sidebar {
+    width: 250px;
+    min-width: 250px;
+    padding: 22px 15px;
+  }
+
+  .bc-brand h2 {
+    font-size: 24px;
+  }
+
+  .bc-nav-item {
+    font-size: 14px;
+  }
+}
